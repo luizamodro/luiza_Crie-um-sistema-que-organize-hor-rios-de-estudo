@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Organizador de Estudos</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizador de Horários de Estudo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="container">
-    <h1>Organizador de Estudos</h1>
-    <form id="study-form">
-      <input type="text" id="task-input" placeholder="Digite sua tarefa de estudo" required />
-      <input type="time" id="time-input" required />
-      <button type="submit">Adicionar</button>
-    </form>
-    <ul id="task-list"></ul>
+    <h1>Meu Horário de Estudo</h1>
+    
+    <!-- Formulário para adicionar horários -->
+    <div class="form-container">
+      <input type="text" id="subject" placeholder="Disciplina">
+      
+      <!-- Campo para escolher o dia da semana -->
+      <select id="day-of-week">
+        <option value="Segunda">Segunda-feira</option>
+        <option value="Terça">Terça-feira</option>
+        <option value="Quarta">Quarta-feira</option>
+        <option value="Quinta">Quinta-feira</option>
+        <option value="Sexta">Sexta-feira</option>
+        <option value="Sábado">Sábado</option>
+        <option value="Domingo">Domingo</option>
+      </select>
+      
+      <input type="time" id="start-time">
+      <input type="time" id="end-time">
+      <button id="add-schedule">Adicionar Horário</button>
+    </div>
+
+    <h2>Agenda Semanal</h2>
+    <div class="timetable" id="timetable">
+      <!-- A agenda semanal será gerada aqui -->
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <script src="scripr.js"></script>
 </body>
 </html>
